@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
-const TareaForm = ()=>{
+const TareaForm = ({agregarTarea})=>{
 
     const[input, setInput]=useState('');
     const formSubmit = (e) =>{
         e.preventDefault();
+        agregarTarea(input);
+        setInput('');
 
     };
 
