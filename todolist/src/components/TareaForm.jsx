@@ -17,7 +17,7 @@ const TareaForm = ({agregarTarea})=>{
             value={input}
             onChange={(e)=> setInput(e.target.value)}
             placeholder="Agregar tarea"/>
-            <button type="submit">Agregar</button>
+            <button type="submit" className ='button-27' role="button">Agregar</button>
         </form>
     );
 
