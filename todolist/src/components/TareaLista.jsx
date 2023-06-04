@@ -1,7 +1,7 @@
 import React from "react";
 import Tarea from "./Tarea";
 
-const TareaLista = ({tareas,quitarTarea})=>{
+const TareaLista = ({tareas,quitarTarea, actualizarTarea})=>{
     return(
         <>
         {
@@ -10,6 +10,7 @@ const TareaLista = ({tareas,quitarTarea})=>{
                 key={tarea}
                 tarea={tarea}
                 quitarTarea={quitarTarea}
+                actualizarTarea={actualizarTarea}
                 />
             ))
         }

@@ -14,12 +14,18 @@ function App() {
 const quitarTarea=(tarea)=>{
     setTareas(tareas.filter((t)=> t !== tarea))
 }
+const actualizarTarea = (tareaAnterior,tareaEditada) =>{
+  setTareas(
+    tareas.map((tarea)=>(tarea === tareaAnterior ? tareaEditada:tarea))
+
+  )
+};
 
   return (
     <div className='container'>
       <h1>Lista de tareas</h1>
       <TareaForm  agregarTarea= {agregarTarea} />
-      <TareaLista tareas={tareas} quitarTarea={quitarTarea} />        
+      <TareaLista tareas={tareas} quitarTarea={quitarTarea} actualizarTarea={actualizarTarea} />        
     </div>
   )
 }
